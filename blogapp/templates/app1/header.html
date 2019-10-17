@@ -1,0 +1,36 @@
+{% block head %}
+<html>
+    <head>
+        <style>
+            body{
+                background: linear-gradient(#0E5B8F  ,#FF5733  );
+
+            }
+            li{
+                padding: 10px;
+            }
+            a{
+                color: black;
+                font-size: 30px;
+                font-style: italic;
+            }
+            div li{
+                display: inline-block;
+            }
+            div{
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <ul>
+                <li><a href="/app1/">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="/app1/login/">LOGIN</a></li>
+                <li><a href="/app1/signup/">SIGNUP</a></li>
+            </ul>
+        </div>
+    </body>
+</html>
+{% endblock %}

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <style>
+            form{
+                padding-top:300px;
+                padding-left: 300px;
+                font-size:40px;
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        {% include "app1/header.html" %}
+        {% block head %}
+        {% endblock %}
+        {% if error %}
+        <h1 style="color:red">{{ error }}</h1>
+        {% endif %}
+        <form method="POST" action="/app1/signup1/" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_ul }}
+            <input type="submit" value="SIGNUP">
+        </form>
+    </body>
+</html>

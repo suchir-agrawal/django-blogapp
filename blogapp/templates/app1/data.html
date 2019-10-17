@@ -1,0 +1,30 @@
+<html>
+    <style>
+        body{
+            background: lightpink;
+        }
+        li{
+            display: inline-block;
+            padding: 10px;
+        }
+        a{
+            color: brown;
+        }
+        div{
+            float: right;
+        }
+    </style>
+    <body>
+        {% for key,value in data.items %}
+        <h1>{{ key }}={{ value }}</h1>
+        {% endfor %}
+        {% if error %}
+        <h1>{{ error }}</h1>
+        {% endif %}
+        <div>
+            <li><a href="/app1/logout/">LOGOUT</a></li>
+            <li><a href="#">BLOGFEED</a></li>
+            <li><a href="#">ADDBLOG</a></li>
+        </div>
+    </body>
+</html>
